@@ -4,3 +4,4 @@ build/
 *.log
 local.properties
 .DS_Store
+patcher
