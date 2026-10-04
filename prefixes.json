@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "updated": "2026-10-04",
+  "apps": [
+    {
+      "binname": "/usr/games/redeclipse",
+      "name": "Red Eclipse",
+      "description": "FPS arena sobre el motor Cube 2. Render y audio funcionando. Graficos al maximo dan caida de FPS en Mali-G52.",
+      "state": "very good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
+    },
+    {
+      "binname": "/usr/games/supertuxkart",
+      "name": "SuperTuxKart",
+      "description": "Carreras 3D de karts. 60 fps estables. Glitches visuales en el modelo de kart: triangulos rojos expuestos y malla deforme por fallo de compilacion del shader de skinning.",
+      "state": "good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
+    },
+    {
+      "binname": "/usr/games/supertux2",
+      "name": "SuperTux 2",
+      "description": "Plataformas 2D clasico. Geometria y audio funcionando.",
+      "state": "good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
+    },
+    {
+      "binname": "/usr/games/extreme-tuxracer",
+      "name": "Extreme Tux Racer",
+      "description": "Carreras de pingueino en nieve. SIGSEGV en inicializacion de miniaudio, si_addr=NULL. Pendiente de diagnostico.",
+      "state": "fail",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
+    },
+    {
+      "binname": "/usr/bin/vkcube",
+      "name": "vkcube",
+      "description": "Demo Vulkan oficial. Render directo via Spatha sobre Mali-G52.",
+      "state": "very good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu"
+        },
+        "args": "",
+        "graphics": "vulkan",
+        "audio": ""
+      }
+    },
+    {
+      "binname": "/usr/bin/vkcubepp",
+      "name": "vkcubepp",
+      "description": "Demo Vulkan oficial (C++). Render directo via Spatha sobre Mali-G52.",
+      "state": "very good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu"
+        },
+        "args": "",
+        "graphics": "vulkan",
+        "audio": ""
+      }
+    }
+  ]
+}
