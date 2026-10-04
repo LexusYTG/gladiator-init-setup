@@ -48,7 +48,7 @@
       }
     },
     {
-      "binname": "/usr/games/extreme-tuxracer",
+      "binname": "/usr/games/etr",
       "name": "Extreme Tux Racer",
       "description": "Carreras de pingueino en nieve. SIGSEGV en inicializacion de miniaudio, si_addr=NULL. Pendiente de diagnostico.",
       "state": "fail",
