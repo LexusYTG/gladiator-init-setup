@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated": "2026-10-04",
+  "updated": "2026-10-05",
   "apps": [
     {
       "binname": "/usr/games/redeclipse",
       "name": "Red Eclipse",
-      "description": "FPS arena sobre el motor Cube 2. Render y audio funcionando. Graficos al maximo dan caida de FPS en Mali-G52.",
+      "description": "FPS arena sobre el motor Cube 2. Render y audio funcionando estables. FPS bajos solo durante grabacion de pantalla con graficos al maximo.",
       "state": "very good",
       "prefixes": {
         "env": {
@@ -56,8 +56,8 @@
     {
       "binname": "/usr/games/etr",
       "name": "Extreme Tux Racer",
-      "description": "Carreras de pingueino en nieve. SIGSEGV en inicializacion de miniaudio, si_addr=NULL. Pendiente de diagnostico.",
-      "state": "fail",
+      "description": "Carreras de pinguino en nieve. Arranca bajo GL4ES sobre Scutum. Glitches visuales menores pendientes.",
+      "state": "inwork",
       "prefixes": {
         "env": {
           "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
@@ -94,6 +94,42 @@
         "args": "",
         "graphics": "vulkan",
         "audio": ""
+      }
+    },
+    {
+      "binname": "/usr/games/luanti",
+      "name": "Luanti",
+      "description": "Juego de construccion voxel, fork activo de Minetest. Render GL4ES sobre Scutum. ~30 FPS estables, sin glitches graficos.",
+      "state": "good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_VIDEO_X11_FORCE_EGL": "1",
+          "SDL_VIDEO_EGL_DRIVER": "/usr/lib/aarch64-linux-gnu/libEGL.so",
+          "ALSOFT_DRIVERS": "null"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
+    },
+    {
+      "binname": "/usr/games/minetest",
+      "name": "Minetest 5.10",
+      "description": "Juego de construccion voxel, version clasica 5.10. Render GL4ES sobre Scutum. ~30 FPS estables, sin glitches graficos.",
+      "state": "good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_VIDEO_X11_FORCE_EGL": "1",
+          "SDL_VIDEO_EGL_DRIVER": "/usr/lib/aarch64-linux-gnu/libEGL.so",
+          "ALSOFT_DRIVERS": "null"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
       }
     }
   ]
