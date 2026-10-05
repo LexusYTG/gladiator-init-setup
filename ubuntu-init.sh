@@ -12,7 +12,7 @@ apt update -qq
 
 progress 80 "Instalando jwm y xterm…"
 DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends \
-    jwm xterm fonts-dejavu-core ca-certificates
+    jwm xterm fonts-dejavu-core ca-certificates curl
 
 progress 90 "Copiando sesar-shell…"
 [ -f /tmp/sesar-shell ] || { printf 'ERROR|%s\n' "sesar-shell no llego al container" >> "$PROGRESS"; exit 1; }
