@@ -108,7 +108,7 @@
       "prefixes": {
         "env": {
           "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
-          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "LD_PRELOAD": "/root/Lorica/libGL.so.1",
           "SDL_VIDEO_X11_FORCE_EGL": "1",
           "SDL_VIDEO_EGL_DRIVER": "/usr/lib/aarch64-linux-gnu/libEGL.so",
           "SDL_AUDIODRIVER": "pulse",
@@ -128,7 +128,7 @@
       "prefixes": {
         "env": {
           "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
-          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "LD_PRELOAD": "/root/Lorica/libGL.so.1",
           "SDL_VIDEO_X11_FORCE_EGL": "1",
           "SDL_VIDEO_EGL_DRIVER": "/usr/lib/aarch64-linux-gnu/libEGL.so",
           "SDL_AUDIODRIVER": "pulse",
