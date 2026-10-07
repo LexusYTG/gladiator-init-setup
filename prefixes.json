@@ -12,7 +12,8 @@
           "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
           "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
           "SDL_AUDIODRIVER": "pulse",
-          "ALSOFT_DRIVERS": "pulse"
+          "ALSOFT_DRIVERS": "pulse",
+          "LIBGL_GL": "21"
         },
         "args": "",
         "graphics": "gl",
