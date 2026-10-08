@@ -32,7 +32,8 @@
           "SDL_VIDEO_X11_FORCE_EGL": "1",
           "SDL_VIDEO_EGL_DRIVER": "/usr/lib/aarch64-linux-gnu/libEGL.so",
           "SDL_AUDIODRIVER": "pulse",
-          "ALSOFT_DRIVERS": "pulse"
+          "ALSOFT_DRIVERS": "pulse",
+          "LIBGL_GL": "21"
         },
         "args": "",
         "graphics": "gl",
