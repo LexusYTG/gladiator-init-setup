@@ -33,7 +33,7 @@
           "SDL_VIDEO_EGL_DRIVER": "/usr/lib/aarch64-linux-gnu/libEGL.so",
           "SDL_AUDIODRIVER": "pulse",
           "ALSOFT_DRIVERS": "pulse",
-          "LIBGL_GL": "21"
+          "LIBGL_GL": "32"
         },
         "args": "",
         "graphics": "gl",
