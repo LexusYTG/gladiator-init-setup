@@ -137,6 +137,28 @@
         "graphics": "gl",
         "audio": "pulse"
       }
+    },
+    {
+      "binname": "/usr/bin/godot3",
+      "name": "Godot 3.6",
+      "description": "Motor de videojuegos. Render GL 3.3 core via Lorica (GLADIATOR).",
+      "state": "inwork",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_VIDEODRIVER": "x11",
+          "SDL_VIDEO_X11_FORCE_EGL": "0",
+          "SDL_OPENGL_LIBRARY": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_AUDIODRIVER": "pulse",
+          "ALSOFT_DRIVERS": "pulse",
+          "LIBGL_GL": "33",
+          "LIBGL_NOBANNER": "1"
+        },
+        "args": "--rendering-driver opengl3 --vsync enabled",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
     }
   ]
 }
