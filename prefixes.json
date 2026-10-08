@@ -158,7 +158,9 @@
         },
         "args": "--rendering-driver opengl3 --vsync enabled",
         "graphics": "gl",
-        "audio": "pulse"
+        "audio": "pulse",
+        "hooks_pre": "[ -e /usr/lib/aarch64-linux-gnu/libudev.so.1 ] && mv /usr/lib/aarch64-linux-gnu/libudev.so.1 /usr/lib/aarch64-linux-gnu/libudev.so.1.hidden || true",
+        "hooks_post": "[ -e /usr/lib/aarch64-linux-gnu/libudev.so.1.hidden ] && mv /usr/lib/aarch64-linux-gnu/libudev.so.1.hidden /usr/lib/aarch64-linux-gnu/libudev.so.1 || true"
       }
     }
   ]
