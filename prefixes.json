@@ -186,7 +186,7 @@
     {
       "binname": "/usr/bin/luanti",
       "name": "Luanti",
-      "description": "Juego de construccion voxel. Luanti 5.17.0 compilado (GCC 15.2, LuaJIT). Render GL 3.1 via Lorica (GLX, FORCE_EGL=0).",
+      "description": "Juego de construccion voxel. Luanti 5.17.0 compilado (GCC 15.2, LuaJIT). Render GL 4.3 core via Lorica (GLX).",
       "state": "very good",
       "prefixes": {
         "env": {
@@ -197,8 +197,9 @@
           "SDL_OPENGL_LIBRARY": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
           "SDL_AUDIODRIVER": "pulse",
           "ALSOFT_DRIVERS": "pulse",
-          "LIBGL_GL": "31",
-          "LIBGL_NOBANNER": "1"
+          "LIBGL_GL": "43",
+          "LIBGL_NOBANNER": "1",
+          "LORICA_GL_MAX_VERSION": "43"
         },
         "args": "",
         "graphics": "gl",
