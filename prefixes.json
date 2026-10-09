@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-10-05",
+  "updated": "2026-10-09",
   "apps": [
     {
       "binname": "/usr/games/redeclipse",
@@ -101,25 +101,6 @@
       }
     },
     {
-      "binname": "/usr/games/luanti",
-      "name": "Luanti",
-      "description": "Juego de construccion voxel, fork activo de Minetest. Render GL4ES sobre Scutum. ~30 FPS estables, sin glitches graficos.",
-      "state": "good",
-      "prefixes": {
-        "env": {
-          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
-          "SDL_VIDEO_X11_FORCE_EGL": "1",
-          "SDL_VIDEO_EGL_DRIVER": "/usr/lib/aarch64-linux-gnu/libEGL.so",
-          "SDL_AUDIODRIVER": "pulse",
-          "ALSOFT_DRIVERS": "pulse",
-          "LIBGL_GL": "31"
-        },
-        "args": "",
-        "graphics": "gl",
-        "audio": "pulse"
-      }
-    },
-    {
       "binname": "/usr/games/minetest",
       "name": "Minetest 5.10",
       "description": "Juego de construccion voxel, version clasica 5.10. Render GL4ES sobre Scutum. ~30 FPS estables, sin glitches graficos.",
@@ -161,6 +142,67 @@
         "audio": "pulse",
         "hooks_pre": "[ -e /usr/lib/aarch64-linux-gnu/libudev.so.1 ] && mv /usr/lib/aarch64-linux-gnu/libudev.so.1 /usr/lib/aarch64-linux-gnu/libudev.so.1.hidden || true",
         "hooks_post": "[ -e /usr/lib/aarch64-linux-gnu/libudev.so.1.hidden ] && mv /usr/lib/aarch64-linux-gnu/libudev.so.1.hidden /usr/lib/aarch64-linux-gnu/libudev.so.1 || true"
+      }
+    },
+    {
+      "binname": "/usr/games/openarena",
+      "name": "OpenArena",
+      "description": "FPS arena sobre ioquake3. Renderer opengl2 via Lorica GL 3.3 core.",
+      "state": "very good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_AUDIODRIVER": "pulse",
+          "ALSOFT_DRIVERS": "pulse",
+          "LIBGL_GL": "33",
+          "LIBGL_NOBANNER": "1",
+          "LORICA_GL_MAX_VERSION": "33"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
+    },
+    {
+      "binname": "/usr/games/assaultcube",
+      "name": "AssaultCube",
+      "description": "NO FUNCIONA. El server embebido (localconnect) nunca bindea el socket UDP y el cliente entra en bucle infinito sobre el protocolo. El crash es consecuencia del bucle, no la causa. Falla en el codigo fuente de AC 0.8.0 (Ubuntu), no en Scutum/Lorica. El server standalone si funciona.",
+      "state": "fail",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_AUDIODRIVER": "pulse",
+          "ALSOFT_DRIVERS": "pulse",
+          "LIBGL_GL": "21",
+          "LIBGL_NOBANNER": "1"
+        },
+        "args": "--init",
+        "graphics": "gl",
+        "audio": "pulse"
+      }
+    },
+    {
+      "binname": "/usr/bin/luanti",
+      "name": "Luanti",
+      "description": "Juego de construccion voxel. Luanti 5.17.0 compilado (GCC 15.2, LuaJIT). Render GL 3.1 via Lorica (GLX, FORCE_EGL=0).",
+      "state": "very good",
+      "prefixes": {
+        "env": {
+          "LD_LIBRARY_PATH": "/usr/lib/aarch64-linux-gnu",
+          "LD_PRELOAD": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_VIDEODRIVER": "x11",
+          "SDL_VIDEO_X11_FORCE_EGL": "0",
+          "SDL_OPENGL_LIBRARY": "/usr/lib/aarch64-linux-gnu/libGL.so.1",
+          "SDL_AUDIODRIVER": "pulse",
+          "ALSOFT_DRIVERS": "pulse",
+          "LIBGL_GL": "31",
+          "LIBGL_NOBANNER": "1"
+        },
+        "args": "",
+        "graphics": "gl",
+        "audio": "pulse"
       }
     }
   ]
